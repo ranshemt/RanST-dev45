@@ -142,7 +142,8 @@ h2{
 	text-align: center;
 }
 
-.knowledge article{
+.knowledge li{
+	list-style-type: none;
 	height: 100px;	
 	width:700px;
 	margin-left: 274px;
