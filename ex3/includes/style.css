@@ -190,13 +190,16 @@ a{
 
 
 #wrapper_layout3{
+    width: auto;
     max-width: 1000px;
+    min-width: 500px;
 }
 
 #wrapper_layout3 header{
     width: 500px;
     height: 500px;
     float: left;
+    background-color: #ffffff;
 }
 #wrapper_layout3 header #logo{
     left: 20px;
@@ -233,38 +236,31 @@ a{
     background-color: #333333;
 }
 
-#wrapper_layout3 aside {
-    height: 500px;
-    width: 500px;
-    float: left;
+#wrapper_layout3 #plus {
+    background-image: url(../images/plus.png);
+    height: 88px;
+    width: 88px;
+    left: 207px;
+    top: 209px;
+    
+    background-repeat: no-repeat;
+}
+
+#wrapper_layout3 main {
+    height: auto;
+    min-height:1000px;
+    max-width: 1000px;
     background-color: #9d261d;
 }
-#wrapper_layout3 aside article{
+
+.box {
+    display: block;
+    float: left;
     height: 250px;
     width: 250px;
     background-color: #000000;
-    float: left;
 }
-#wrapper_layout3 aside article:hover{
+.box:hover{
     background-color: #ffffff;
-    opacity: 1.0;
-}
-#wrapper_layout3 aside .box1{
-    opacity: 0.75;   
-}
-#wrapper_layout3 aside .box2{
-    opacity: 0.3;   
-}
-#wrapper_layout3 aside .box3{
-    opacity: 0.15;   
-}
-#wrapper_layout3 aside .box4{
-    opacity: 0.5;   
-}
-
-
-#wrapper_layout3 main {
-     height: 500px;
-     width: 1000px;
-     background-color: #9d261d;
+    opacity: 1.0 ! important;
 }
