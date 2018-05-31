@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <title>RanST BootStrap form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+       
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="includes/style.css">
+        <script src="includes/ranForm.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="includes/style.css">
+        <script src="includes/ranForm.js"></script>
+        <script>
+             $(function(){
+                var includes = $('[data-include]');
+                jQuery.each(includes, function(){
+                var file = 'images/' + $(this).data('include') + '.html';
+                $(this).load(file);
+                });
+            });
+        </script>
+	</head>
+	<body>
+        <!--<div data-include="mySVG">photo</div>-->
+        <!--Intro Section-->
+        <section class="view intro-2">
+            <div class="full-bg-img">
+                <div class="container flex-center">
+                    <div class="row flex-center pt-5 mt-3">
+                        <div class="col-lg text-center">
+                            <div class="white-text">
+                                <h1 class="h1-responsive wow fadeInLeft" data-wow-delay="0.3s">Let's Save the Earth Together</h1>
+                                    <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+                                    <h4 class="wow fadeInLeft" data-wow-delay="0.3s">Sign Up and Join Us</h4>
+                                    <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row flex-center">
+                        <div class="col-sm-4 col-sm-offset-0">
+                                <form action="http://html5-book.co.il/teach/forms/get_form2.php" method="GET">
+                                    <div class="form-group">
+                                        <label for="FName">Full Name:  </label>
+                                        <input class="form-control" id="FName" required name="fullName" placeholder="enter your name">
+                                    </div>
+                        
+                                    <div class="form-group">
+                                        <label for="Pass">Password:  </label>
+                                        <input type="password" class="form-control" id="Pass" pattern="[a-z][A-Z][0-9] {*}" name="pass" maxlength="8"
+                                            minlength="4" title="Password Rules: 4-8 charcters, only a-z / A-Z / 0-9">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="Mail">e-mail: </label>
+                                        <input class="form-control" id="Mail" type="email" name="mail">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="Website">Website: </label>
+                                        <input class="form-control" id="Website" type="url" name="website">
+                                    </div>
+                        
+                                    <div class="form-group">
+                                        <label for="Phone">Phone: </label>
+                                        <input class="form-control" id="Phone" type="tel" name="phone">
+                                    </div>
+                        
+                                    <div class="form-group">
+                                        <label for="Coffee">How many pets do you have? </label>
+                                        <input class="form-control" id="Coffee" type="number" name="coffee" min="0" max="25">
+                                    </div>
+                        
+                                    <div class="form-group">
+                                        <label for="Temper">How does global warmming affect you? </label>
+                                        <input class="form-control" id="Temper" type="range" name="temper">
+                                    </div>
+                        
+                                    <div class="form-group">
+                                        <label for="adrText">Address:</label>
+                                        <textarea class="form-control" id="adrText" name="address" rows="3" cols="40"></textarea>
+                                    </div>
+                        
+                        
+                                    
+                                    <br>
+                                    <button type="button" id="adrVailidate">Validate Address option 3</button> <br>
+                                    <h4 id="errInPnt">
+                                        
+                                    </h4>
+                        
+                                    <h3 class="h3Bold">Avtivities for the planet: </h3>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="Books">Kissing trees</label>
+                                        <input class="form-check-input" id="Books" type="checkbox" name="interests[]" value="kiss trees">
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="Tv">Preaching about vegan</label>
+                                        <input class="form-check-input" id="Tv" type="checkbox" name="interests[]" value="preaching vegan">
+                                    </div>
+                                    <div class="form-check">
+                                            <label class="form-check-label" for="Sport">Riding bike / walikng only</label>
+                                            <input class="form-check-input" id="Sport" type="checkbox" name="interests[]" value="no motor vehicles">
+                                    </div>
+                                    <div class="form-check">
+                                            <label class="form-check-label" for="Gaming">Voluntter at a pet shelter</label>
+                                            <input class="form-check-input" id="Gaming" type="checkbox" name="interests[]" value="pet shelter">
+                                    </div>
+                        
+                                    <div class="form-check">
+                                        <label for="inputState"><h3 class="h3Bold">In your opinion, how many years are left before the human race destroy the planet?</h3></label>
+                                        <select id="inputState" class="form-control" name="age">
+                                            <option selected>18</option>
+                                            <option>19</option><option>20</option><option>21</option>
+                                            <option>22</option><option>23</option><option>24</option>
+                                            <option>25</option><option>26</option><option>27</option>
+                                            <option>28</option><option>29</option><option>30</option>
+                                        </select>
+                                    </div>
+                        
+                                    <div class="form-group">
+                                        <h3 class="h3Bold">Gender:</h3>
+                                        <div class="form-check">
+                                            <label class="form-check-label" for="Male">Male</label>
+                                            <input class="form-check-input" id="Male" type="radio" name="gender" value="male">
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label" for="Female">Female</label>
+                                            <input class="form-check-input" id="Female" type="radio" name="gender" value="female">
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label" for="Queer">Queer</label>
+                                            <input class="form-check-input" id="Female" type="radio" name="gender" value="queer">
+                                        </div>
+                                    </div>
+                        
+                                    <input id="sub" type="submit" value="Submit">
+                                    <br><br>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+	</body>
+</html>
